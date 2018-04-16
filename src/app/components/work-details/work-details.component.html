@@ -1,0 +1,45 @@
+<div id="details-container">
+  <div class="out-hitbox" (click)="goBack()"></div>
+  <div class="back" (click)="goBack()">Go Back</div>
+
+  <div class="details-container">
+    <div class="item-details">
+      <div class="header">
+        <div class="header-img" [ngStyle]="{'background-image': 'url('+detailItems.headerImg+')'}"></div>
+        <div class="header-text">{{detailItems.headerText}}</div>
+      </div>
+
+      <div class="abstract">
+        <div class="abstract-hashtags">{{detailItems.abstractHashtags}}</div>
+        <div class="abstract-text" [innerHTML]='detailItems.abstractText | keepHtml'></div>
+      </div>
+
+      <div class="sec1">
+        <div class="sec1-img" [ngStyle]="{'background-image': 'url('+detailItems.sec1Img+')'}"></div>
+        <div class="sec1-text" [innerHTML]='detailItems.sec1Text1 | keepHtml'></div>
+        <div class="sec1-text" [innerHTML]='detailItems.sec1Text2 | keepHtml'></div>
+      </div>
+
+      <div class="sec2">
+        <div class="sec2-text">
+          <div>{{detailItems.sec2Header}}</div>
+          <span>{{detailItems.sec2Text}}</span>
+        </div>
+        <div class="sec2-img1" [ngStyle]="{'background-image': 'url('+detailItems.sec2Img1+')'}"></div>
+        <div class="sec2-img2" [ngStyle]="{'background-image': 'url('+detailItems.sec2Img2+')'}"></div>
+        <div class="sec2-quote" *ngIf="detailItems.sec2Quote != ''">{{detailItems.sec2Quote}}</div>
+      </div>
+
+      <div class="link">
+        <a [href]="detailItems.link" target="_blank">Visit the Site</a>
+      </div>
+    </div>
+  </div>
+
+  <div [hidden]="true">
+    <img [src]="detailItems.headerImg" id="headerImg">
+    <img [src]="detailItems.sec1Img" id="sec1Img">
+    <img [src]="detailItems.sec2Img1" id="sec2Img1">
+    <img [src]="detailItems.sec2Img2" id="sec2Img2">
+  </div>
+</div>

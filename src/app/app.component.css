@@ -1,0 +1,109 @@
+#app-bg {
+  background-image: url('../assets/imgs/home-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#main-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37, 37, 37, 0.8);
+  opacity: 0;
+  overflow: hidden;
+}
+
+#menu {
+  position: fixed;
+  top: -100%; left: 0;
+  width: 14vw;
+  height: 100vh;
+  background-color: #7E776A;
+  z-index: 99;
+}
+
+#menu .right {
+  position: absolute;
+  top: 0; right: 1vw;
+  width: 8vw;
+  height: 80vh;
+}
+
+.right .logo {
+  display: block;
+  font-family: 'Monoton', cursive;
+  font-size: 7.5vw;
+  text-align: center;
+  line-height: 1em;
+  border: 2px solid #ADA395;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.right ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.right ul a {
+  color: black;
+  text-decoration: none;
+  padding: 1.1vh 0 1.1vh 1.1vh;
+  margin-bottom: 2vh;
+  width: 100%;
+  display: inline-block;
+  line-height: 4vh;
+  position: relative;
+  font-family: 'Supermercado One', cursive;
+}
+.right ul a span {
+  position: absolute;
+  background-color: hsla(0,0%,100%,.4);
+}
+.right ul a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+}
+.right ul a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+}
+.right ul a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+}
+.right ul a span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+}
+.right ul .line-big {
+  font-size: 3.3vh;
+}
+.right ul .line-sub {
+  font-size: 2.55vh;
+}
+
+#menu .left-container {
+  -webkit-filter: drop-shadow(1px 0px 5px rgba(0,0,0,0.5));
+  filter: drop-shadow(1px 0px 5px rgba(0,0,0,0.5));
+}
+#menu .left {
+  position: fixed;
+  top: -100%; left: 0;
+  width: 4vw;
+  height: 100vh;
+  background-color: #ADA395;
+}

@@ -1,0 +1,22 @@
+<div id="development-container">
+  <ul>
+
+    <li *ngFor="let item of workItems; let i=index" class="work-item" appWorkItems [bgColor]="item.bgColor" [cover]="item.cover">
+      <div class="text" (click)="goDetails(item.firstName)">
+        <div class="title">
+          <span>{{ item.firstName }}</span>
+          <span>{{ item.lastName }}</span>
+        </div>
+      </div>
+
+      <div class="hitbox">
+        <div class="hashtags">{{ item.hashtags }}</div>
+      </div>
+
+      <div class="featured-cover"></div>
+
+      <img [hidden]="true" *ngIf="item.cover != ''" [src]="'assets/imgs/'+item.cover" [id]="'coverImg'+i">
+    </li>
+
+  </ul>
+</div>

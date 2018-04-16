@@ -1,0 +1,43 @@
+<app-canvas *ngIf="loading"></app-canvas>
+
+<div id="app-bg">
+  <div id="main-overlay"></div>
+
+  <nav id="menu">
+    <div class="right">
+      <a class="logo" (click)="goHome()">A</a> <hr style="border-color:#ADA395;">
+      <br>
+
+      <ul class="items">
+        <li (click)="navigate()">
+          <a [routerLink]="['/development/app']" appNavItemsAnimation>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="line-big">App</div>
+            <div class="line-sub">development</div>
+          </a>
+        </li>
+
+        <li (click)="navigate()">
+            <a [routerLink]="['/development/web']" appNavItemsAnimation>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div class="line-big">Web</div>
+              <div class="line-sub">development</div>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+    <div class="left-container">
+      <div class="left"></div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</div>
